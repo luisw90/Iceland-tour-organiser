@@ -1,0 +1,269 @@
+* {
+}
+
+:root {
+  --primary-color-white: white;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background__image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  object-fit: cover;
+}
+
+.page-title {
+  padding: 5px;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 4.5em;
+  width: 100%;
+  overflow: hidden;
+  align-self: center;
+}
+
+.form__container {
+  margin-top: 5%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.form__label {
+  padding-left: 10px;
+  padding-bottom: 0px;
+}
+.filter__label {
+  padding-left: 10px;
+  padding-bottom: 0px;
+}
+.form__label,
+.filter__label {
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.addDeveloperFirstNameInput,
+.addDeveloperLastNameInput {
+  width: 100%;
+  padding-inline: 0;
+  padding-block: 14px;
+  margin-inline: 0;
+  outline: 0.4px solid black;
+  border-radius: 20px;
+  border: none;
+}
+
+.addDeveloperFirstNameInput[type='text'],
+.addDeveloperLastNameInput[type='text'] {
+  padding-left: 15px;
+  width: 100%;
+}
+
+.form__select-bootcamp {
+  padding-block: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.selectBootcamp {
+  width: 30%;
+  padding-block: 14px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.form__button-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__button {
+  height: 40px;
+  width: 80px;
+  border: 0.1px solid black;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: rgb(208, 165, 79);
+  cursor: pointer;
+}
+
+.errorMessage-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 5px;
+  padding-inline: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(208, 165, 79);
+  margin-top: 5px;
+}
+
+.errorMessage {
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
+  align-self: center;
+}
+
+.main-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  border-radius: 10px;
+}
+
+.gallery__title {
+  margin-block: 0;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.gallery__title:before,
+.gallery__title:after {
+  content: '';
+  flex: 1 1;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin: auto;
+}
+.gallery__title:before {
+  margin-right: 10px;
+}
+.gallery__title:after {
+  margin-left: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.bootcamp__title {
+  margin-top: 0px;
+  border-bottom: 0.9px solid rgb(225, 173, 70);
+}
+
+.bootcamp {
+  outline: 0.3px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background: var(--primary-color-white);
+  opacity: 0.8;
+}
+
+.card__developer-box,
+.card__instructor-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 3px;
+  gap: 5px;
+}
+
+.card__developer-box {
+  cursor: pointer;
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 1.1em;
+  opacity: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card__name {
+  padding-block: 3px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.card__deletebtn {
+  display: block;
+  cursor: pointer;
+  border: 0.1px solid black;
+  border-radius: 5px;
+  background-color: #fd9;
+  cursor: pointer;
+}
+
+.form__button:hover,
+.card__deletebtn:hover {
+  background: #fd9;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card__deletebtn--hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page-title {
+    width: 50%;
+  }
+  .form__container {
+    flex-direction: row;
+  }
+  .page-title {
+    font-size: 4em;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1225px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .page-title {
+    font-size: 6em;
+    width: 50%;
+  }
+}
